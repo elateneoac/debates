@@ -2,6 +2,7 @@ library(readr)
 library(tidyverse)
 library(tidytext)
 library(stringi)
+library(stopwords)
 
 debate_vicepresidentes <- read_csv("data/01_debate_vicepresidentes.csv")
 
@@ -23,21 +24,27 @@ df_debate<-df_debate%>%
          text= str_to_lower(text))
 
 filtro_palabras<-stri_trans_general(stopwords("es"), "Latin-ASCII")
-
+filtro_palabras2 <- c("voy","anos","asi","van","dos","hoy","vos")
 # divido por palabra
 palabras <- df_debate%>%
   unnest_tokens(input = text, output = word) %>% 
   count(topico,candidato,word) %>% 
-  group_by(topico,candidato)
+  group_by(topico,candidato)%>% 
+  filter(!word %in% filtro_palabras) %>% 
+  filter(!word %in% filtro_palabras2) %>% 
+  group_by(candidato,word) %>% 
+  mutate(N = sum(n)) %>% 
+  ungroup() %>% 
+  group_by(topico,candidato) %>% 
+  arrange(N)
 
 #esquisse::esquisser(palabras)
 
 # Grafico de palabras
-palabras %>% 
-  filter(!word %in% filtro_palabras) %>% 
-  top_n(8) %>% 
+palabras   %>% 
+  filter(N > 5) %>% 
   ggplot() +
-  aes(x = reorder(word,n), y = n, fill = topico) +
+  aes(x = reorder(word,N), y = n, fill = topico) +
   geom_col() +
   scale_fill_manual(
     values = c("#440154","#22908B","#FDE725")
