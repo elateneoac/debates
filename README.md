@@ -28,7 +28,7 @@ El resultado final es una valiosa fuente de datos que facilita el acceso a los s
 
 [Primer debate vicepresidentes](https://www.youtube.com/watch?v=NLb9WkfrvUY): `01_debate_vicepresidentes.csv`
 
-Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.
+[Primer debate presidencial](https://www.youtube.com/watch?v=0xQ4vsDK8Hk): `01_debate_presidentes.csv`
 
 ➡️ Readme elaborado con CHATGPT
 
