@@ -73,7 +73,7 @@ print(head(df_debates_vices))
 debate_vicepresidentes_colapsado <- df_debates_vices %>%
   arrange(topico) %>% 
   group_by(topico, candidato, desde, hasta) %>%
-  summarize(texto_colapsado = paste(text, collapse = " "),
+  summarize(texto = paste(text, collapse = " "),
             fecha_debate = "2023-09-20",
             link = first(link)) %>%
   mutate(desde = format(seconds_to_period(desde), format = "%H:%M:%S"),
