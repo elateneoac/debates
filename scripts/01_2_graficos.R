@@ -24,7 +24,7 @@ df_debate<-df_debate%>%
          text= str_to_lower(text))
 
 filtro_palabras<-stri_trans_general(stopwords("es"), "Latin-ASCII")
-filtro_palabras2 <- c("voy","anos","asi","van","dos","hoy","vos")
+filtro_palabras2 <- c("hace","ser","solo","victoria","eh","voy","anos","asi","van","dos","hoy","vos","nlega","aca","luis","va","cuatro")
 # divido por palabra
 palabras <- df_debate%>%
   unnest_tokens(input = text, output = word) %>% 
@@ -42,9 +42,9 @@ palabras <- df_debate%>%
 
 # Grafico de palabras
 palabras   %>% 
-  filter(N > 5) %>% 
+  filter(N > 4) %>% 
   ggplot() +
-  aes(x = reorder(word,N), y = n, fill = topico) +
+  aes(x = reorder_within(word, N, candidato), y = n, fill = topico) +
   geom_col() +
   scale_fill_manual(
     values = c("#440154","#22908B","#FDE725")
@@ -65,7 +65,8 @@ palabras   %>%
     plot.subtitle = element_text(size = 14L,
                                  hjust = 0.5)
   ) +
-  facet_wrap(vars(candidato), scales = "free")
+  scale_x_reordered()+
+  facet_wrap(vars(candidato), scales = "free")  
 
 # Diversidad de léxico
 

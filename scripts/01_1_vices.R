@@ -66,4 +66,21 @@ write.csv(df_debates_vices, "./data/01_debate_vicepresidentes.csv", fileEncoding
 
 
 
+# df_debates_vices <- read_csv("data/01_debate_vicepresidentes.csv")
 
+print(head(df_debates_vices))
+
+debate_vicepresidentes_colapsado <- df_debates_vices %>%
+  arrange(topico) %>% 
+  group_by(topico, candidato, desde, hasta) %>%
+  summarize(texto_colapsado = paste(text, collapse = " "),
+            fecha_debate = "2023-09-20",
+            link = first(link)) %>%
+  mutate(desde = format(seconds_to_period(desde), format = "%H:%M:%S"),
+         hasta = format(seconds_to_period(hasta), format = "%H:%M:%S"))%>%
+  ungroup() 
+
+
+
+# Exporto
+write.csv(debate_vicepresidentes_colapsado, "./data/01_debate_vicepresidentes.csv", fileEncoding = "UTF-8", row.names = F)
