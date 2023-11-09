@@ -31,3 +31,5 @@ El resultado final es una valiosa fuente de datos que facilita el acceso a los s
 Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.
 
 ➡️ Readme elaborado con CHATGPT
+🫶 [Seguinos en redes](https://www.instagram.com/dicenlosmedios/)
+💻 [Y a nuestra página](https://www.dicenlosmedios.com.ar)
