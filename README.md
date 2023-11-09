@@ -10,17 +10,15 @@ Este proyecto tiene como objetivo disponibilizar los subtítulos de los debates 
 
 A continuación, se presenta una descripción de las variables que se encuentran en los datasets:
 
-| Variable     | Descripción                                                         |
-|-----------------|-------------------------------------------------------|
-| `segment_id` | Identificador único de segmento de subtítulos.                      |
-| `topico`     | Tópico o tema relacionado con el segmento de subtítulos.            |
-| `candidato`  | Nombre del candidato político mencionado en el segmento.            |
-| `text`       | Texto de los subtítulos correspondientes al segmento.               |
-| `start`      | Tiempo de inicio del segmento en segundos.                          |
-| `duration`   | Duración del segmento en segundos.                                  |
-| `desde`      | Tiempo de inicio del intervalo de tiempo relacionado (en segundos). |
-| `hasta`      | Tiempo de finalización del intervalo de tiempo (en segundos).       |
-| `link`       | Enlace al video de YouTube asociado al segmento.                    |
+| Variable       | Descripción                                              |
+|------------------|------------------------------------------------------|
+| `topico`       | Tópico o tema relacionado con el segmento de subtítulos. |
+| `candidato`    | Nombre del candidato político mencionado en el segmento. |
+| `desde`        | Tiempo de inicio del intervalo de tiempo relacionado.    |
+| `hasta`        | Tiempo de finalización del intervalo de tiempo.          |
+| `texto`        | Texto de los subtítulos correspondientes al segmento.    |
+| `fecha_debate` | Fecha en la que se trasmitió el debate                   |
+| `link`         | Enlace al video de YouTube asociado al segmento.         |
 
 El proyecto implica la descarga de subtítulos de debates presidenciales y vicepresidenciales, la correspondencia de los segmentos de subtítulos con intervalos de tiempo definidos en los debates y la asignación de candidatos y tópicos a cada segmento.
 
@@ -33,3 +31,7 @@ El resultado final es una valiosa fuente de datos que facilita el acceso a los s
 Si tienes alguna otra pregunta o necesitas más ayuda, no dudes en preguntar.
 
 ➡️ Readme elaborado con CHATGPT
+
+🫶 [Seguinos en redes](https://www.instagram.com/dicenlosmedios/)
+
+💻 [Y a nuestra página](https://www.dicenlosmedios.com.ar)
