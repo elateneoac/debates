@@ -12,7 +12,7 @@ A continuación, se presenta una descripción de las variables que se encuentran
 
 | Variable       | Descripción                                              |
 |------------------|------------------------------------------------------|
-| `modo` | Tipo de intervencion del candidato (Presentación, turno, derecho a réplica|
+| `modo` | Tipo de intervencion del candidato (Presentación, turno, derecho a réplica)|
 | `topico`       | Tópico o tema relacionado con el segmento de subtítulos. |
 | `candidato`    | Nombre del candidato político mencionado en el segmento. |
 | `desde`        | Tiempo de inicio del intervalo de tiempo relacionado.    |
