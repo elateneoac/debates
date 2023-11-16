@@ -30,6 +30,10 @@ El resultado final es una valiosa fuente de datos que facilita el acceso a los s
 
 [Primer debate presidencial](https://www.youtube.com/watch?v=0xQ4vsDK8Hk): `01_debate_presidentes.csv`
 
+[Segundo debate presidencial](https://www.youtube.com/watch?v=rSgyeo5MRUw): `02_debate_presidentes.csv`
+
+[Tercer debate presidencial](https://www.youtube.com/watch?v=pn2zTU38gcM): `03_debate_presidentes_ballotage.csv`
+
 ➡️ Readme elaborado con CHATGPT
 
 🫶 [Seguinos en redes](https://www.instagram.com/dicenlosmedios/)
